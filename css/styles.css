@@ -1,0 +1,233 @@
+:root {
+  --accent-color: #2196f3;
+  --logo-color: #000000;
+  --main-font: "Roboto", Roboto, sans-serif;
+  --secondary-font: "Raleway", Raleway, sans-serif;
+  --heading-color: #212121;
+  --main-color: #757575;
+  --main-color-dark-backgr: #ffffff;
+  --backgr-color-first: #2f303a;
+  --backgr-color-second: #f5f4fa;
+  --addres-second-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  color: var(--main-color);
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+button {
+  font-family: var(--main-font);
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ============== HEADER ============== */
+.address {
+  font-style: normal;
+}
+
+.logo {
+  color: var(--logo-color);
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo-first-part {
+  color: var(--accent-color);
+}
+
+.navigation-list-link,
+.address-list-link {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+}
+
+.navigation-list-link {
+  color: var(--heading-color);
+}
+
+.address-list-link {
+  color: var(--main-color);
+}
+
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.address-list-link:hover,
+.address-list-link:focus {
+  color: var(--accent-color);
+}
+
+.navigation-list-link.active {
+  color: var(--accent-color);
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+/* ============== END HEADER ============== */
+
+/* ============== HERO SECTION ============== */
+.hero-section {
+  background-color: var(--backgr-color-first);
+}
+
+.hero-title {
+  font-family: var(--main-font);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--main-color-dark-backgr);
+  /*color: #ffffff;*/
+}
+
+.hero-button {
+  font-family: var(--main-font);
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+/* ============== END HERO SECTION ============== */
+
+/* ============== OUR SERVICE SECTION ============== */
+.services-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.174;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+.advantages-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+}
+/* ============== END OUR SERVICE SECTION ============== */
+
+/* ============== OUR SPECIALIZATION SECTION ============== */
+
+.specialization-title,
+.our-command-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--heading-color);
+}
+
+/* ============== END OUR SPECIALIZATION SECTION ============== */
+
+/* ============== OUR COMAND ============== */
+.our-command-section {
+  background-color: var(--backgr-color-second);
+}
+.our-specialist-name {
+  font-weight: 500;
+  color: var(--heading-color);
+}
+.our-specialist-specialization {
+  font-weight: 400;
+}
+.our-specialist-name,
+.our-specialist-specialization {
+  font-size: 16px;
+  line-height: 1.188;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+/* ============== END OUR COMAND ============== */
+
+/* ============== FOOTER ============== */
+.footer {
+  background-color: var(--backgr-color-first);
+}
+.logo-second-part-dark {
+  color: var(--main-color-dark-backgr);
+}
+.address-footer-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--addres-second-color);
+}
+.location {
+  color: var(--main-color-dark-backgr);
+}
+/* ============== END FOOTER ============== */
+
+/* ============== PORTFOLIO ============== */
+
+.portfolio-button {
+  color: var(--heading-color);
+  background-color: var(--backgr-color-second);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+  background-color: var(--accent-color);
+  color: var(--main-color-dark-backgr);
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--heading-color);
+}
+
+.portfolio-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+}
+
+/* ============== END PORTFOLIO ============== */
