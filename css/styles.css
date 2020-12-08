@@ -9,6 +9,9 @@
   --backgr-color-first: #2f303a;
   --backgr-color-second: #f5f4fa;
   --addres-second-color: rgba(255, 255, 255, 0.6);
+  --card-set-specialization: 30px;
+  --card-set-our-command: 30px;
+  --card-set-portfolio: 30px;
 }
 
 body {
@@ -16,18 +19,9 @@ body {
   font-family: var(--main-font);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
 .list {
   list-style: none;
+  color: var(--main-color);
   margin: 0;
   padding: 0;
 }
@@ -37,27 +31,10 @@ p {
   color: var(--main-color);
 }
 
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-  color: var(--main-color);
-}
-
 button {
   font-family: var(--main-font);
   border: 0;
+  border-radius: 4px;
 }
 
 .visually-hidden {
@@ -73,11 +50,46 @@ button {
   overflow: hidden;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+*/
+.container {
+  width: 1600px;
+  margin: 0 auto;
+  padding: 0 215px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+}
+
 /* ============== HEADER ============== */
 .header > .container {
   display: flex;
@@ -94,6 +106,11 @@ button {
   display: flex;
 }
 
+.address-list-header {
+  display: flex;
+  align-items: center;
+}
+
 .header .logo {
   margin-right: 93px;
 }
@@ -103,6 +120,9 @@ button {
 }
 
 .navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+.header .address-list-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -152,29 +172,34 @@ button {
 .navigation-list-link.active {
   color: var(--accent-color);
 }
-
+/*
 .nav-link {
   text-decoration: none;
-}
+}*/
 
 /* ============== END HEADER ============== */
 
 /* ============== HERO SECTION ============== */
+
+.hero-section > .container {
+  background-color: var(--backgr-color-first);
+  flex-direction: column;
+}
+
 .hero-section {
   background-color: var(--backgr-color-first);
 }
 
 .hero-title {
-  font-family: var(--main-font);
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.363;
-
+  line-height: 1.364;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--main-color-dark-backgr);
-  /*color: #ffffff;*/
+  margin-top: 200px;
+  margin-bottom: 30px;
 }
 
 .hero-button {
@@ -196,23 +221,56 @@ button {
 /* ============== END HERO SECTION ============== */
 
 /* ============== OUR SERVICE SECTION ============== */
+
+.services-list {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.service-list-item {
+  padding: 3px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .services-title {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.174;
-  letter-spacing: 0.03em;
+  line-height: 1.142;
   text-transform: uppercase;
   color: var(--heading-color);
+  margin-bottom: 10px;
 }
-.advantages-description {
+.services-description {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
+  line-height: 1.714;
 }
+
 /* ============== END OUR SERVICE SECTION ============== */
 
 /* ============== OUR SPECIALIZATION SECTION ============== */
+
+.specialization-section > .container {
+  flex-direction: column;
+  padding-bottom: 94px;
+}
+.specialization-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-specialization));
+  margin-top: calc(-1 * var(--card-set-specialization));
+}
+
+.specialization-list-item {
+  flex-basis: calc(100% / 3 - var(--card-set-specialization));
+  margin-left: var(--card-set-specialization);
+  margin-top: var(--card-set-specialization);
+}
 
 .specialization-title,
 .our-command-title {
@@ -224,9 +282,55 @@ button {
   color: var(--heading-color);
 }
 
+.specialization-title {
+  margin-bottom: 50px;
+}
+
 /* ============== END OUR SPECIALIZATION SECTION ============== */
 
 /* ============== OUR COMAND ============== */
+
+.our-command-section > .container {
+  background-color: var(--backgr-color-second);
+  padding-top: 94px;
+  padding-bottom: 94px;
+  flex-direction: column;
+}
+
+.our-command-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-our-command));
+  margin-top: calc(-1 * var(--card-set-our-command));
+}
+
+.our-command-list-item {
+  background-color: var(--main-color-dark-backgr);
+  flex-basis: calc(100% / 4 - var(--card-set-our-command));
+  margin-left: var(--card-set-our-command);
+  margin-top: var(--card-set-our-command);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.our-command-card-content {
+  padding: 30px 10px;
+}
+
+.our-command-title {
+  margin-bottom: 50px;
+}
+
+.our-specialist-name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.our-specialist-specialization {
+  font-weight: 400;
+}
 .our-command-section {
   background-color: var(--backgr-color-second);
 }
@@ -247,8 +351,19 @@ button {
 /* ============== END OUR COMAND ============== */
 
 /* ============== FOOTER ============== */
-.footer {
+.footer > .container {
   background-color: var(--backgr-color-first);
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer .logo {
+  margin-bottom: 20px;
+}
+
+.footer .addres-list:not(:last-child) {
+  margin-bottom: 9px;
 }
 .logo-second-part-dark {
   color: var(--main-color-dark-backgr);
