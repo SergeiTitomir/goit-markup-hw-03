@@ -21,7 +21,7 @@ body {
 
 .list {
   list-style: none;
-  color: var(--main-color);
+  /*color: var(--main-color);*/
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,7 @@ body {
   color: var(--main-color);
 }
 
-button {
+.button {
   font-family: var(--main-font);
   border: 0;
   border-radius: 4px;
@@ -61,7 +61,7 @@ h6 {
 
 ul,
 ol {
-  list-style: none;
+  /*list-style: none;*/
   margin: 0;
   padding: 0;
 }
@@ -82,12 +82,12 @@ a {
 }
 */
 .container {
-  width: 1600px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0 215px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: transparent;
 }
 
 /* ============== HEADER ============== */
@@ -137,7 +137,6 @@ a {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-  text-decoration: none;
 }
 
 .logo-first-part {
@@ -146,8 +145,6 @@ a {
 
 .navigation-list-link,
 .address-list-link {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
@@ -181,24 +178,24 @@ a {
 
 /* ============== HERO SECTION ============== */
 
-.hero-section > .container {
+.hero-section {
   background-color: var(--backgr-color-first);
-  display: flex;
-  align-items: center;
+}
+
+.hero-section > .container {
   flex-direction: column;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.364;
-  min-width: 696px;
-  height: 120px;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-color-dark-backgr);
-  margin-top: 200px;
   margin-bottom: 30px;
 }
 
@@ -215,20 +212,21 @@ a {
   padding: 10px 32px;
   color: var(--main-color-dark-backgr);
   background-color: var(--accent-color);
-  margin-bottom: 200px;
 }
 /* ============== END HERO SECTION ============== */
 
 /* ============== OUR SERVICE SECTION ============== */
 
-.services-list {
-  display: flex;
+.our-service > .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
+.services-list {
+  display: flex;
+}
+
 .service-list-item {
-  padding: 3px;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -260,15 +258,14 @@ a {
 .specialization-list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-set-specialization));
-  margin-top: calc(-1 * var(--card-set-specialization));
 }
+/*flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-specialization));
+  margin-top: calc(-1 * var(--card-set-specialization)); 
+} */
 
-.specialization-list-item {
-  flex-basis: calc(100% / 3 - var(--card-set-specialization));
-  margin-left: var(--card-set-specialization);
-  margin-top: var(--card-set-specialization);
+.specialization-list-item:not(:last-child) {
+  margin-right: var(--card-set-specialization);
 }
 
 .specialization-title,
@@ -290,25 +287,22 @@ a {
 /* ============== OUR COMAND ============== */
 
 .our-command-section > .container {
-  background-color: var(--backgr-color-second);
   padding-top: 94px;
   padding-bottom: 94px;
   flex-direction: column;
 }
 
+.our-command-section {
+  background-color: var(--backgr-color-second);
+}
+
 .our-command-list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-set-our-command));
-  margin-top: calc(-1 * var(--card-set-our-command));
 }
 
 .our-command-list-item {
   background-color: var(--main-color-dark-backgr);
-  flex-basis: calc(100% / 4 - var(--card-set-our-command));
-  margin-left: var(--card-set-our-command);
-  margin-top: var(--card-set-our-command);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -330,16 +324,7 @@ a {
 .our-specialist-specialization {
   font-weight: 400;
 }
-.our-command-section {
-  background-color: var(--backgr-color-second);
-}
-.our-specialist-name {
-  font-weight: 500;
-  color: var(--heading-color);
-}
-.our-specialist-specialization {
-  font-weight: 400;
-}
+
 .our-specialist-name,
 .our-specialist-specialization {
   font-size: 16px;
@@ -350,8 +335,10 @@ a {
 /* ============== END OUR COMAND ============== */
 
 /* ============== FOOTER ============== */
-.footer > .container {
+.footer {
   background-color: var(--backgr-color-first);
+}
+.footer > .container {
   flex-direction: column;
   align-items: flex-start;
   padding-top: 60px;
@@ -389,8 +376,8 @@ a {
 }
 
 .portfolio-nav {
-  margin-left: 8px;
   margin-bottom: 50px;
+  display: flex;
 }
 .portfolio-button {
   color: var(--heading-color);
@@ -401,6 +388,9 @@ a {
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.portfolio-button:not(:last-child) {
   margin-right: 8px;
 }
 
