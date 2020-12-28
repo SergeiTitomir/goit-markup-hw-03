@@ -231,7 +231,7 @@ a {
   letter-spacing: 0.03em;
 }
 
-.advantages-list-item:not(:last-child) {
+.our-command-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
