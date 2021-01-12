@@ -225,13 +225,12 @@ a {
 .services-list {
   display: flex;
 }
-
 .service-list-item {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
 
-.our-command-list-item:not(:last-child) {
+.service-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -245,6 +244,7 @@ a {
 .services-description {
   font-weight: 400;
   line-height: 1.714;
+  letter-spacing: 0.03em;
 }
 
 /* ============== END OUR SERVICE SECTION ============== */
